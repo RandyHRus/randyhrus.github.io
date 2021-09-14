@@ -154,7 +154,127 @@
 					</article>
 				</div>
 			</section>
+		</div>
+		<div class="container">
+			<header>
+				<h2><a>Resorto</a></h2>
+			</header>
+			<div class="row gtr-200">
+				<div class="col-4 col-12-mobile">
+					<article class="container">
+						<p>
+							Resorto is a resort management game I created in Unity with C#. In this game, 
+							you play as a resort manager in charge of attracting tourists to a deserted island.
+						</p>
+						<header>
+							<h3><a>Procedual island generation</a></h3>
+						</header>
+						<p>
+							The island terrain is generated randomly using Perlin noise, 
+							with the darker areas of the noise representing hills and 
+							mountains and white areas representing the ocean.
+						</p>
+						<article class="container special">
+							<img width="48%" src="images/resorto/perlinNoise.gif" /> 
+							<img width="48%" src="images/resorto/Island1.png" /> 
+							<img width="48%" src="images/resorto/Island2.png" /> 
+							<img width="48%" src="images/resorto/Island3.png" /> 
+						</article>
+						<br/>
+						<header>
+							<h3><a>Pathfinding</a></h3>
+						</header>
+						<p>
+							The tourists move around the island using A* pathfinding. 
+							When a tourist decides where they want to go, the shortest path to the 
+							destination will be calculated while avoiding terrain, water, and obstacles.
+						</p>
+						<iframe width="100%" height="200"
+						src="https://www.youtube.com/embed/QfkvR2-PaTg" 
+						title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+						clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</article>
 
+				</div>
+				<div class="col-4 col-12-mobile">
+
+					<article class="container">
+						<header>
+							<h3><a>Fishing</a></h3>
+						</header>
+						<p>
+							Fish randomly spawns around the ocean. The player and tourists can take part in fishing.
+						</p>
+						<article class="container special">
+							<img width="100%" src="images/resorto/Fish.png" /> 
+						</article>
+						<iframe width="100%" height="200"
+						src="https://www.youtube.com/embed/4MtmiCCbXwQ"
+						title="YouTube video player" frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; 
+						encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p>
+							The fishing line animation is created using Bezier curves. 
+							The 3 points of the curve changes during different parts of the animation to create a 
+							natural-looking casting animation.
+						</p>
+						<iframe width="100%" height="200" 
+							src="https://www.youtube.com/embed/0jxoFDjeyg0" 
+							title="YouTube video player" frameborder="0" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+							gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p>
+							The fishing line can be charged to cast farther and can 
+							be cast in different directions. And the bezier line renderer will change the 
+							rendering accordingly.
+						</p>
+						<header>
+							<h3><a>Zoning</a></h3>
+						</header>
+						<p>The player can create zones around the island to dedicate spaces for certain 
+							activities. For example, if a fishing
+							zone is created, the tourists will only go to that zone to fish.</p>
+							<iframe width="100%" height="200" 
+							src="https://www.youtube.com/embed/QC4spd8WX-k" title="YouTube video player" 
+							frameborder="0" allow="accelerometer; autoplay; 
+							clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</article>
+		
+				</div>
+				<div class="col-4 col-12-mobile">
+
+					<article class="container">
+						<header>
+							<h3><a>Tourist schedules and traits</a></h3>
+						</header>
+						<p>
+							Each tourist will have different schedules. 
+							Like what time they go to bed, what day they leave the island, or when they eat. 
+						</p>
+						<p>
+							If a tourist is scheduled to go to bed at 8pm, they would have to start heading back 
+							to bed before that time so that they would arrive at their bed by 8pm. 						</p>
+						<p>
+							This means tourists would have to be notified however many minutes before
+							 it would take them to walk back to their bed. I set up a clock event system that 
+							 could be subscribed and unsubscribed to. Tourists could subscribe to any given time,
+							  such as 7:32pm. And when that time is reached, all subscribers (tourists in this case) 
+							  of that time will be notified that the time has reached, and they would start heading back
+							   to bed (or do other scheduled activities).
+
+						</p>
+						<article class="container special">
+							<img width="100%" src="images/resorto/Bed.png" /> 
+						</article>
+						<p>
+							Each tourist arriving on the island has random traits. 
+							Some will prefer different activities such as fishing, 
+							and will take part in that activity more frequently.  
+						</p>
+					</article>
+		
+				</div>
+			</div>
 		</div>
 
 		<!-- Footer -->
@@ -184,7 +304,7 @@
 						<!-- Copyright -->
 						<div class="copyright">
 							<ul class="menu">
-								<li>&copy; Portfolio. All rights reserved.</li>
+								<li>&copy; Randy Russell. All rights reserved.</li>
 								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
