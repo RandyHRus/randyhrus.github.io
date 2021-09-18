@@ -1863,6 +1863,15 @@ article.special > footer {
     text-align: center;
 }
 
+.descriptionContainer {
+    background-color: white;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .row > section,
 .row > article {
     margin-bottom: 0;
@@ -2259,6 +2268,14 @@ button.alt:hover,
 
 .icon.brands:before {
     font-family: "Font Awesome 5 Brands";
+}
+
+.icon.brands.descSize {
+    font-size: 30px;
+}
+
+.icon.brands.descSize2 {
+    font-size: 15px;
 }
 
 .icon.circled {
@@ -3274,4 +3291,8 @@ body.homepage.is-preload #header:after {
     .carousel article .image {
         margin-bottom: 2em;
     }
+}
+
+.center {
+    text-align: center;
 }
